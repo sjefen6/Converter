@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Converter</string>
+
+    <!-- UI Labels -->
+    <string name="fromLabel">From:</string>
+    <string name="toLabel">To:</string>
+    <string name="inputLabel">Input:</string>
+    <string name="outputLabel">Result:</string>
+
+    <!-- Categories -->
+    <string name="distance">Distance</string>
+    <string name="area">Area</string>
+    <string name="volume">Volume</string>
+    <string name="mass">Mass</string>
+    <string name="temperature">Temperature</string>
+    <string name="time">Time</string>
+
+    <!-- Subcategory Distance -->
+    <string name="angstrom">Angstrom</string>
+    <string name="micron">Micron</string>
+    <string name="millimeter">Millimeter</string>
+    <string name="centimeter">Centimeter</string>
+    <string name="decimeter">Decimeter</string>
+    <string name="meter">Meter</string>
+    <string name="kilometer">Kilometer</string>
+    <string name="inches">Inches</string>
+    <string name="feet">Feet</string>
+
+    <!-- Subcategory Area -->
+    <string name="squaremillimeters">Squaremillimeters</string>
+    <string name="squarecentimeters">Squarecentimeters</string>
+    <string name="squarefeet">Squarefeet</string>
+    <string name="squareinches">Squareinches</string>
+    <string name="squareyards">Squareyards</string>
+
+    <!-- Subcategory Volume -->
+    <string name="cubicmillimeter">Cubicmillimeter</string>
+    <string name="cubiccentimeter">Cubiccentimeter</string>
+    <string name="cubicdecimeter">Cubicdecimeter</string>
+    <string name="cubickilometer">Cubickilometer</string>
+    <string name="cubicinches">Cubicinches</string>
+    <string name="cubicfeet">Cubicfeet</string>
+    <string name="cubicyards">Cubicyards</string>
+    <string name="milliliters">Milliliters</string>
+    <string name="centiliters">Centiliters</string>
+    <string name="deciliters">Deciliters</string>
+    <string name="liters">Liters</string>
+
+    <!-- Subcategory Mass -->
+    <string name="mikrogram">Mikrogram</string>
+    <string name="milligram">Milligram</string>
+    <string name="centigram">Centigram</string>
+    <string name="decigram">Decigram</string>
+    <string name="gram">Gram</string>
+    <string name="decagram">Decagram</string>
+    <string name="kilogram">Kilogram</string>
+    <string name="ounces">Ounces</string>
+    <string name="pounds">Pounds</string>
+
+    <!-- Subcategory Temperature -->
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="kelvin">Kelvin</string>
+
+    <!-- Subcategory Time -->
+    <string name="milliseconds">Milliseconds</string>
+    <string name="seconds">Seconds</string>
+    <string name="minutes">Minutes</string>
+    <string name="hours">Hours</string>
+    <string name="days">Days</string>
+    <string name="weeks">Weeks</string>
+    <string name="months">Months</string>
+    <string name="years">Years</string>
+    <string name="decades">Decades</string>
+    <string name="centuries">Centuries</string>
+
+</resources>
