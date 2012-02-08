@@ -1,0 +1,1 @@
+# Applikasjoner for mobil og web - Oblig 1
