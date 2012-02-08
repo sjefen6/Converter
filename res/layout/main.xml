@@ -127,7 +127,10 @@
                 android:id="@+id/inputEditText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -147,10 +150,7 @@
                 android:id="@+id/outputEditText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" >
-
-                <requestFocus />
-            </EditText>
+                android:inputType="numberDecimal" />
         </LinearLayout>
     </LinearLayout>
 
