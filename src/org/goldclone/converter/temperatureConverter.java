@@ -47,6 +47,4 @@ public class temperatureConverter {
 	{
 		return (this.kelvin * (9/5) - 459.67);
 	}
-	
-
 }

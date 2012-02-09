@@ -9,71 +9,72 @@
     <string name="inputLabel">Input:</string>
     <string name="outputLabel">Result:</string>
 
-    <!-- Categories -->
-    <string name="distance">Distance</string>
-    <string name="area">Area</string>
-    <string name="volume">Volume</string>
-    <string name="mass">Mass</string>
-    <string name="temperature">Temperature</string>
-    <string name="time">Time</string>
-
-    <!-- Subcategory Distance -->
-    <string name="angstrom">Angstrom</string>
-    <string name="micron">Micron</string>
-    <string name="millimeter">Millimeter</string>
-    <string name="centimeter">Centimeter</string>
-    <string name="decimeter">Decimeter</string>
-    <string name="meter">Meter</string>
-    <string name="kilometer">Kilometer</string>
-    <string name="inches">Inches</string>
-    <string name="feet">Feet</string>
-
-    <!-- Subcategory Area -->
-    <string name="squaremillimeters">Squaremillimeters</string>
-    <string name="squarecentimeters">Squarecentimeters</string>
-    <string name="squarefeet">Squarefeet</string>
-    <string name="squareinches">Squareinches</string>
-    <string name="squareyards">Squareyards</string>
-
-    <!-- Subcategory Volume -->
-    <string name="cubicmillimeter">Cubicmillimeter</string>
-    <string name="cubiccentimeter">Cubiccentimeter</string>
-    <string name="cubicdecimeter">Cubicdecimeter</string>
-    <string name="cubickilometer">Cubickilometer</string>
-    <string name="cubicinches">Cubicinches</string>
-    <string name="cubicfeet">Cubicfeet</string>
-    <string name="cubicyards">Cubicyards</string>
-    <string name="milliliters">Milliliters</string>
-    <string name="centiliters">Centiliters</string>
-    <string name="deciliters">Deciliters</string>
-    <string name="liters">Liters</string>
-
-    <!-- Subcategory Mass -->
-    <string name="mikrogram">Mikrogram</string>
-    <string name="milligram">Milligram</string>
-    <string name="centigram">Centigram</string>
-    <string name="decigram">Decigram</string>
-    <string name="gram">Gram</string>
-    <string name="decagram">Decagram</string>
-    <string name="kilogram">Kilogram</string>
-    <string name="ounces">Ounces</string>
-    <string name="pounds">Pounds</string>
-
-    <!-- Subcategory Temperature -->
-    <string name="celsius">Celsius</string>
-    <string name="fahrenheit">Fahrenheit</string>
-    <string name="kelvin">Kelvin</string>
-
-    <!-- Subcategory Time -->
-    <string name="milliseconds">Milliseconds</string>
-    <string name="seconds">Seconds</string>
-    <string name="minutes">Minutes</string>
-    <string name="hours">Hours</string>
-    <string name="days">Days</string>
-    <string name="weeks">Weeks</string>
-    <string name="months">Months</string>
-    <string name="years">Years</string>
-    <string name="decades">Decades</string>
-    <string name="centuries">Centuries</string>
+    <string-array name="categories">
+        <item>Distance</item>
+        <item>Area</item>
+        <item>Volume</item>
+        <item>Mass</item>
+        <item>Temperature</item>
+        <item>Time</item>
+    </string-array>
+    <string-array name="distance">
+        <item>Angstrom</item>
+        <item>Micron</item>
+        <item>Millimeter</item>
+        <item>Centimeter</item>
+        <item>Decimeter</item>
+        <item>Meter</item>
+        <item>Kilometer</item>
+        <item>Inches</item>
+        <item>Feet</item>
+    </string-array>
+    <string-array name="area">
+        <item>Squaremillimeters</item>
+        <item>Squarecentimeters</item>
+        <item>Squarefeet</item>
+        <item>Squareinches</item>
+        <item>Squareyards</item>
+    </string-array>
+    <string-array name="volume">
+        <item>Cubicmillimeter</item>
+        <item>Cubiccentimeter</item>
+        <item>Cubicdecimeter</item>
+        <item>Cubickilometer</item>
+        <item>Cubicinches</item>
+        <item>Cubicfeet</item>
+        <item>Cubicyards</item>
+        <item>Milliliters</item>
+        <item>Centiliters</item>
+        <item>Deciliters</item>
+        <item>Liters</item>
+    </string-array>
+    <string-array name="mass">
+        <item>Mikrogram</item>
+        <item>Milligram</item>
+        <item>Centigram</item>
+        <item>Decigram</item>
+        <item>Gram</item>
+        <item>Decagram</item>
+        <item>Kilogram</item>
+        <item>Ounces</item>
+        <item>Pounds</item>
+    </string-array>
+    <string-array name="temperature">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+    <string-array name="time">
+        <item>Milliseconds</item>
+        <item>Seconds</item>
+        <item>Minutes</item>
+        <item>Hours</item>
+        <item>Days</item>
+        <item>Weeks</item>
+        <item>Months</item>
+        <item>Years</item>
+        <item>Decades</item>
+        <item>Centuries</item>
+    </string-array>
 
 </resources>
