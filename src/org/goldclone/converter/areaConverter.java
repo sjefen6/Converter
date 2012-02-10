@@ -38,15 +38,15 @@ public class areaConverter {
 
 		
 		if (to == 0) {// Squaremillimeters
-			return input;
+			return sqMMeter;
 		} else if (to == 1) { // Squarecentimeters
-			return input / 100;
+			return sqMMeter / 100;
 		} else if (to == 2) {// Squarefeet
-			return input / 92903;
+			return sqMMeter / 92903;
 		} else if (to == 3) { // Squareinches
-			return input / 645.2;
+			return sqMMeter / 645.2;
 		} else { // Squareyards
-			return input / 836127;
+			return sqMMeter / 836127;
 		}
 	}
 }
