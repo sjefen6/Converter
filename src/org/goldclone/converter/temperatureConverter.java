@@ -1,8 +1,8 @@
 package org.goldclone.converter;
 
 public class temperatureConverter {
-	
-	//The standard temperature is Kelvin
+
+	// The standard temperature is Kelvin
 
 	private static temperatureConverter instance = null;
 	private double kelvin;
@@ -17,34 +17,24 @@ public class temperatureConverter {
 		}
 		return instance;
 	}
-	
-	public void setKelvin(double kelvin)
-	{
-		this.kelvin = kelvin;
-	}
-	
-	public void setCelsius(double celsius)
-	{
-		this.kelvin = celsius + 273.15;
-	}
-	
-	public void setFahrenheit(double fahrenheit)
-	{
-		this.kelvin = (fahrenheit + 459.67) * (5/9);
-	}
-	
-	public double getKelvin()
-	{
-		return this.kelvin;
-	}
-	
-	public double getCelsius()
-	{
-		return this.kelvin - 273.15;
-	}
-	
-	public double getFahrenheit()
-	{
-		return (this.kelvin * (9/5) - 459.67);
+
+	public double convert(double input, int from, int to) {
+		double kelvin;
+
+		if (from == 0) {
+			kelvin = input + 273.15;
+		} else if (from == 1) {
+			kelvin = (double) ((input + 460) * (double) (5.0 / 9.0));
+		} else {
+			kelvin = input;
+		}
+
+		if (to == 0) {
+			return (kelvin - 273.15);
+		} else if (to == 1) {
+			return (kelvin * (double) (9.0 / 5.0) - 460);
+		} else {
+			return kelvin;
+		}
 	}
 }

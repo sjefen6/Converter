@@ -10,10 +10,28 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.TextView.OnEditorActionListener;
 
 public class ConverterActivity extends Activity {
+
+	private class inputListener implements OnEditorActionListener {
+
+		@Override
+		public boolean onEditorAction(TextView arg0, int arg1, KeyEvent arg2) {
+			calculate();
+			return false;
+		}
+
+	}
+
+	int category;
+	EditText inputEditText;
+	Spinner toSpinner;
+	Spinner fromSpinner;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -22,8 +40,8 @@ public class ConverterActivity extends Activity {
 
 		populateCategory();
 
-		EditText inputEditText = (EditText) findViewById(R.id.inputEditText);
-		inputEditText.setKeyListener(new inputListener());
+		inputEditText = (EditText) findViewById(R.id.inputEditText);
+		inputEditText.setOnEditorActionListener(new inputListener());
 	}
 
 	private void populateCategory() {
@@ -49,8 +67,8 @@ public class ConverterActivity extends Activity {
 		/*
 		 * See comments for populateCategory()
 		 */
-		Spinner fromSpinner = (Spinner) findViewById(R.id.fromSpinner);
-		Spinner toSpinner = (Spinner) findViewById(R.id.toSpinner);
+		fromSpinner = (Spinner) findViewById(R.id.fromSpinner);
+		toSpinner = (Spinner) findViewById(R.id.toSpinner);
 
 		ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this,
 				categoryId, android.R.layout.simple_spinner_item);
@@ -66,17 +84,19 @@ public class ConverterActivity extends Activity {
 				long arg3) {
 			// TODO Auto-generated method stub
 			int categoryId = 0;
-			if (arg0.getSelectedItemPosition() == 0)
+			category = arg0.getSelectedItemPosition();
+
+			if (category == 0)
 				categoryId = R.array.distance;
-			else if (arg0.getSelectedItemPosition() == 1)
+			else if (category == 1)
 				categoryId = R.array.area;
-			else if (arg0.getSelectedItemPosition() == 2)
+			else if (category == 2)
 				categoryId = R.array.volume;
-			else if (arg0.getSelectedItemPosition() == 3)
+			else if (category == 3)
 				categoryId = R.array.mass;
-			else if (arg0.getSelectedItemPosition() == 4)
+			else if (category == 4)
 				categoryId = R.array.temperature;
-			else if (arg0.getSelectedItemPosition() == 5)
+			else if (category == 5)
 				categoryId = R.array.time;
 			else
 				Toast.makeText(arg0.getContext(), "WTH Error!",
@@ -90,37 +110,29 @@ public class ConverterActivity extends Activity {
 		}
 	}
 
-	private class inputListener implements KeyListener {
+	private void calculate() {
+		// TODO Auto-generated method stub
+		EditText outputEditText = (EditText) findViewById(R.id.outputEditText);
+		String a = inputEditText.getText().toString();
+		double input = Double.parseDouble(a);
+		int from = (int) fromSpinner.getSelectedItemId();
+		int to = (int) toSpinner.getSelectedItemId();
 
-		@Override
-		public void clearMetaKeyState(View arg0, Editable arg1, int arg2) {
-			// TODO Auto-generated method stub
-
-		}
-
-		@Override
-		public int getInputType() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public boolean onKeyDown(View arg0, Editable arg1, int arg2,
-				KeyEvent arg3) {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-		@Override
-		public boolean onKeyOther(View arg0, Editable arg1, KeyEvent arg2) {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-		@Override
-		public boolean onKeyUp(View arg0, Editable arg1, int arg2, KeyEvent arg3) {
-			// TODO Auto-generated method stub
-			return false;
-		}
+		if (category == 0) // Distance
+			outputEditText.setText("text");
+		// else if (category == 1) // Area
+		// categoryId = R.array.area;
+		// else if (category == 2) // Volume
+		// categoryId = R.array.volume;
+		// else if (category == 3) // Mass
+		// categoryId = R.array.mass;
+		else if (category == 4) // Temperature
+			outputEditText.setText(Double.toString(temperatureConverter
+					.getInstance().convert(input, from, to)));
+		// else if (category == 5) // Time
+		// categoryId = R.array.time;
+		// else
+		// Toast.makeText(arg0.getContext(), "WTH Error!",
+		// Toast.LENGTH_LONG).show();
 	}
 }
