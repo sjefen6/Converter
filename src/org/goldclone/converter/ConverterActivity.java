@@ -2,8 +2,6 @@ package org.goldclone.converter;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.method.KeyListener;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -119,20 +117,25 @@ public class ConverterActivity extends Activity {
 		int to = (int) toSpinner.getSelectedItemId();
 
 		if (category == 0) // Distance
-			outputEditText.setText("text");
-		// else if (category == 1) // Area
-		// categoryId = R.array.area;
-		// else if (category == 2) // Volume
-		// categoryId = R.array.volume;
-		// else if (category == 3) // Mass
-		// categoryId = R.array.mass;
+			outputEditText.setText(Double.toString(distanceConverter.getInstance()
+					.convert(input, from, to)));
+		else if (category == 1) // Area
+			outputEditText.setText(Double.toString(areaConverter.getInstance()
+					.convert(input, from, to)));
+		else if (category == 2) // Volume
+			outputEditText.setText(Double.toString(volumeConverter
+					.getInstance().convert(input, from, to)));
+		else if (category == 3) // Mass
+			outputEditText.setText(Double.toString(massConverter.getInstance()
+					.convert(input, from, to)));
 		else if (category == 4) // Temperature
 			outputEditText.setText(Double.toString(temperatureConverter
 					.getInstance().convert(input, from, to)));
-		// else if (category == 5) // Time
-		// categoryId = R.array.time;
-		// else
-		// Toast.makeText(arg0.getContext(), "WTH Error!",
-		// Toast.LENGTH_LONG).show();
+		else if (category == 5) // Time
+			outputEditText.setText(Double.toString(timeConverter.getInstance()
+					.convert(input, from, to)));
+		else
+			Toast.makeText(getBaseContext(), "WTH Error!", Toast.LENGTH_LONG)
+					.show();
 	}
 }

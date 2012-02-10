@@ -2,10 +2,7 @@ package org.goldclone.converter;
 
 public class temperatureConverter {
 
-	// The standard temperature is Kelvin
-
 	private static temperatureConverter instance = null;
-	private double kelvin;
 
 	protected temperatureConverter() {
 		// Exists only to defeat instantiation.
