@@ -36,7 +36,6 @@ public class areaConverter {
 			sqMMeter = input * 836127;
 		}
 
-		
 		if (to == 0) {// Squaremillimeters
 			return sqMMeter;
 		} else if (to == 1) { // Squarecentimeters
