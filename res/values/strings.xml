@@ -4,6 +4,7 @@
     <string name="app_name">Converter</string>
 
     <!-- UI Labels -->
+    <string name="categoryLabel">Category:</string>
     <string name="fromLabel">From:</string>
     <string name="toLabel">To:</string>
     <string name="inputLabel">Input:</string>

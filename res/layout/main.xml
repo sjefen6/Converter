@@ -4,106 +4,38 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <HorizontalScrollView
-        android:id="@+id/categoryScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+    <TextView
+        android:id="@+id/categoryLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/categoryLabel" />
 
-        <LinearLayout
-            android:id="@+id/categoryLinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
-
-            <!--  <Button
-                android:id="@+id/distanceButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance" />
-
-            <Button
-                android:id="@+id/areaButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/area" />
-
-            <Button
-                android:id="@+id/volumeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/volume" />
-
-            <Button
-                android:id="@+id/massButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mass" />
-
-            <Button
-                android:id="@+id/temperatureButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string-array/category[1]" />
-
-            <Button
-                android:id="@+id/timeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/time" /> -->
-        </LinearLayout>
-    </HorizontalScrollView>
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/fromLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fromLabel"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="@string/fromLabel" />
 
-    <HorizontalScrollView
-        android:id="@+id/fromScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <LinearLayout
-            android:id="@+id/fromLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
-
-            <!-- <Button
-                android:id="@+id/distanceButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance" /> -->
-        </LinearLayout>
-    </HorizontalScrollView>
+    <Spinner
+        android:id="@+id/fromSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/toLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/toLabel"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="@string/toLabel" />
 
-    <HorizontalScrollView
-        android:id="@+id/toScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <LinearLayout
-            android:id="@+id/toLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
-
-            <!-- <Button
-                android:id="@+id/distanceButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance" /> -->
-        </LinearLayout>
-    </HorizontalScrollView>
+    <Spinner
+        android:id="@+id/toSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:id="@+id/ioLinearLayout"
